@@ -210,7 +210,18 @@ class Clii < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    wheel_resource_names = %w[jiter orjson ormsgpack pydantic_core tiktoken uuid-utils xxhash zstandard]
+
+    venv = virtualenv_create(libexec, "python3.11")
+    venv.pip_install resources.reject { |r| wheel_resource_names.include?(r.name) }
+
+    resources.select { |r| wheel_resource_names.include?(r.name) }.each do |r|
+      r.fetch
+      system libexec/"bin/python", "-m", "pip", "install", "--no-deps", "--ignore-installed",
+             r.cached_download
+    end
+
+    venv.pip_install_and_link buildpath
   end
 
   def caveats
