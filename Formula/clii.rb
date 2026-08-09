@@ -217,8 +217,9 @@ class Clii < Formula
 
     resources.select { |r| wheel_resource_names.include?(r.name) }.each do |r|
       r.fetch
-      system libexec/"bin/python", "-m", "pip", "install", "--no-deps", "--ignore-installed",
-             r.cached_download
+      wheel = buildpath/File.basename(r.url)
+      cp r.cached_download, wheel
+      system libexec/"bin/python", "-m", "pip", "install", "--no-deps", "--ignore-installed", wheel
     end
 
     venv.pip_install_and_link buildpath
