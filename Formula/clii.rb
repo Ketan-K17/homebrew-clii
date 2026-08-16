@@ -3,8 +3,8 @@ class Clii < Formula
 
   desc "Natural language terminal assistant for macOS"
   homepage "https://github.com/Ketan-K17/clii"
-  url "https://github.com/Ketan-K17/clii/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "f0e770354e2fc00dd4aecba518a736eb1075edd7bd1cade2c679938187e80198"
+  url "https://github.com/Ketan-K17/clii/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "39301ca0031f2d5f867c4eb7efbc8ca05fa90a7dfc029c35ffb60710838bf11f"
   license :cannot_represent
 
   depends_on "python@3.11"
@@ -79,6 +79,11 @@ class Clii < Formula
     sha256 "ccf5ef02c896f6807b4d0e51aaf678a72ce81ae41201cae8d65e11eeff9ecb79"
   end
 
+  resource "langchain-ollama" do
+    url "https://files.pythonhosted.org/packages/d4/9b/6641afe8a5bf807e454fd464eddfc7eb2f2df53cb0b29744381171f9c609/langchain_ollama-1.1.0.tar.gz"
+    sha256 "f776f56f6782ae4da7692579b94a6575906118318d1023b455d7207f9d059811"
+  end
+
   resource "langgraph" do
     url "https://files.pythonhosted.org/packages/a4/8a/47b983e33d3afc8c2c2385d2d8f3731ddfb5cb08e88f307f75105252a94c/langgraph-1.1.5.tar.gz"
     sha256 "24b85d2d40cd002766d489e76f18027f947e4151366ac7ed97bab030ce50e494"
@@ -102,6 +107,11 @@ class Clii < Formula
   resource "langsmith" do
     url "https://files.pythonhosted.org/packages/7e/d7/21ffae5ccdc3c9b8de283e8f8bf48a92039681df0d39f15133d8ff8965bd/langsmith-0.7.25.tar.gz"
     sha256 "d17da71f156ca69eafd28ac9627c8e0e93170260ec37cd27cedc83205a067598"
+  end
+
+  resource "ollama" do
+    url "https://files.pythonhosted.org/packages/fc/72/5f12423b6b39ca8430fbe56f77fcf4ef60f63067c7c4a2e30e200ed9ec16/ollama-0.6.2.tar.gz"
+    sha256 "936d55daa684f474364c098611c933626f8d6c7d67065c5b7ae0c477b508b07f"
   end
 
   resource "openai" do
@@ -137,6 +147,11 @@ class Clii < Formula
   resource "python-decouple" do
     url "https://files.pythonhosted.org/packages/e1/97/373dcd5844ec0ea5893e13c39a2c67e7537987ad8de3842fe078db4582fa/python-decouple-3.8.tar.gz"
     sha256 "ba6e2657d4f376ecc46f77a3a615e058d93ba5e465c01bbe57289bfb7cce680f"
+  end
+
+  resource "prompt_toolkit" do
+    url "https://files.pythonhosted.org/packages/7d/ea/39b988c938f75cb75d7045b5c69f8bfed47ee2152c8837fb403de29d6fb8/prompt_toolkit-3.0.53.tar.gz"
+    sha256 "9ec8a0ad96d5c56148b3f914aa79c1564c3fde5d2e6b876e7bc327e353cf8fa6"
   end
 
   resource "PyYAML" do
@@ -197,6 +212,11 @@ class Clii < Formula
   resource "uuid-utils" do
     url "https://files.pythonhosted.org/packages/43/b7/add4363039a34506a58457d96d4aa2126061df3a143eb4d042aedd6a2e76/uuid_utils-0.14.1-cp39-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl"
     sha256 "93a3b5dc798a54a1feb693f2d1cb4cf08258c32ff05ae4929b5f0a2ca624a4f0"
+  end
+
+  resource "wcwidth" do
+    url "https://files.pythonhosted.org/packages/34/74/c6428f875774288bec1396f5bfcbc2d925700a4dad61727fd5f2b12f249d/wcwidth-0.8.2.tar.gz"
+    sha256 "91fbef97204b96a3d4d421609b80340b760cf33e26da123ff243d76b1fda8dda"
   end
 
   resource "xxhash" do
