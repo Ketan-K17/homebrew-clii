@@ -3,8 +3,8 @@ class Clii < Formula
 
   desc "Natural language terminal assistant for macOS"
   homepage "https://github.com/Ketan-K17/clii"
-  url "https://github.com/Ketan-K17/clii/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "2f699cef3aa2163a515f2ce8ec91e32ab71303e19dadcde411ef4b51d09f8859"
+  url "https://github.com/Ketan-K17/clii/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "3c22d4106c5049cb161cbf9263afa3f0556121516d45f941f536416360c91cfa"
   license :cannot_represent
 
   depends_on "python@3.11"
